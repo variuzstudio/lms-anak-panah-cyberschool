@@ -58,12 +58,57 @@ function AppContent() {
   );
 }
 
+function Watermark() {
+  const text = 'ANAK PANAH CYBERSCHOOL';
+  const rows = 12;
+  const cols = 6;
+
+  return (
+    <div
+      className="fixed inset-0 overflow-hidden select-none"
+      style={{
+        zIndex: 99999,
+        pointerEvents: 'none',
+      }}
+    >
+      <div
+        className="absolute inset-0"
+        style={{
+          display: 'grid',
+          gridTemplateRows: `repeat(${rows}, 1fr)`,
+          gridTemplateColumns: `repeat(${cols}, 1fr)`,
+          transform: 'rotate(-25deg) scale(1.5)',
+          transformOrigin: 'center center',
+        }}
+      >
+        {Array.from({ length: rows * cols }).map((_, i) => (
+          <div
+            key={i}
+            className="flex items-center justify-center whitespace-nowrap"
+            style={{
+              fontSize: '13px',
+              fontWeight: 700,
+              fontFamily: "'Inter', sans-serif",
+              letterSpacing: '3px',
+              color: 'rgba(255, 255, 255, 0.04)',
+              textShadow: '0 0 2px rgba(255,255,255,0.01)',
+            }}
+          >
+            {text}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <LanguageProvider>
       <AuthProvider>
         <NotificationProvider>
           <AppContent />
+          <Watermark />
           <Toaster position="top-right" richColors theme="dark" />
         </NotificationProvider>
       </AuthProvider>
