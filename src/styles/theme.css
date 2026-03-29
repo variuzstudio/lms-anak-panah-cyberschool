@@ -122,6 +122,8 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    font-stretch: semi-condensed;
+    font-variation-settings: 'wdth' 87;
   }
 
   html, body, #root {
