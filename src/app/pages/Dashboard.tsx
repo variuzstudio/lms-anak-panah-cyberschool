@@ -40,13 +40,13 @@ function StatCard({ title, value, icon, color, trend }: StatCardProps) {
             <div style={{ color }}>{icon}</div>
           </div>
           {trend && (
-            <div className="text-[#1aff00] text-[10px] md:text-xs flex items-center gap-1 bg-[#1aff00]/10 px-2 py-0.5 rounded-full border border-[#1aff00]/15">
+            <div className="text-[#1aff00] text-xs md:text-xs flex items-center gap-1 bg-[#1aff00]/10 px-2 py-0.5 rounded-full border border-[#1aff00]/15">
               <TrendingUp size={11} />{trend}
             </div>
           )}
         </div>
-        <p className="text-white/40 text-[10px] md:text-xs mb-0.5">{title}</p>
-        <p className="text-xl md:text-2xl font-bold text-white">{value}</p>
+        <p className="text-white/40 text-xs md:text-sm mb-0.5">{title}</p>
+        <p className="text-2xl md:text-3xl font-bold text-white">{value}</p>
       </div>
     </div>
   );
@@ -75,8 +75,8 @@ function QuickAction({ title, description, onClick, color }: QuickActionProps) {
         }}>
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
         <div className="w-1 h-6 rounded-full absolute left-0 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" style={{ backgroundColor: color, boxShadow: `0 0 10px ${color}60` }} />
-        <h3 className="text-xs md:text-sm font-semibold mb-1 text-white/80 group-hover:text-white transition-colors">{title}</h3>
-        <p className="text-[10px] md:text-xs text-white/30">{description}</p>
+        <h3 className="text-sm md:text-base font-semibold mb-1 text-white/80 group-hover:text-white transition-colors">{title}</h3>
+        <p className="text-xs md:text-sm text-white/30">{description}</p>
       </div>
     </button>
   );
@@ -148,7 +148,7 @@ function AdminDashboard() {
           <div className="w-full bg-white/[0.06] rounded-full h-1.5 mt-3 overflow-hidden">
             <div className="bg-gradient-to-r from-[#00aeff] to-[#1aff00] h-1.5 rounded-full transition-all" style={{ width: `${paymentPercentage}%`, boxShadow: '0 0 10px rgba(0,174,255,0.4)' }} />
           </div>
-          <p className="text-[10px] text-white/30 text-center">{paymentPercentage}% {t('dash.paidPercentage')}</p>
+          <p className="text-xs text-white/30 text-center">{paymentPercentage}% {t('dash.paidPercentage')}</p>
         </div>
       </GlassCard>
 

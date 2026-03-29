@@ -121,7 +121,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
           </div>
           <img src="/logo.svg" alt="Logo" className={cn("transition-all", sidebarOpen ? "w-full h-auto" : "h-7 w-auto mx-auto")} />
           {sidebarOpen && (
-            <p className="text-[9px] text-white/40 tracking-widest uppercase mt-2 font-['Acumin_Variable_Concept',sans-serif] text-center">Learning Management System</p>
+            <p className="text-[11px] text-white/40 tracking-widest uppercase mt-2 font-['Acumin_Variable_Concept',sans-serif] text-center">Learning Management System</p>
           )}
         </div>
 
@@ -150,7 +150,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
                   {item.icon}
                 </div>
                 {sidebarOpen && (
-                  <span className="text-xs font-medium truncate">{t(item.labelKey as any)}</span>
+                  <span className="text-sm font-medium truncate">{t(item.labelKey as any)}</span>
                 )}
               </button>
             );
@@ -168,8 +168,8 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
                 {user?.name.charAt(0)}
               </div>
               <div className="min-w-0 flex-1">
-                <p className="text-xs font-medium truncate">{user?.name}</p>
-                <p className="text-[10px] text-white/40 truncate">{getRoleLabel()}</p>
+                <p className="text-sm font-medium truncate">{user?.name}</p>
+                <p className="text-xs text-white/40 truncate">{getRoleLabel()}</p>
               </div>
             </div>
           ) : (
@@ -182,7 +182,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
           )}
           <button
             onClick={logout}
-            className="w-full py-2 px-3 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-lg transition-colors text-xs font-medium flex items-center justify-center gap-2"
+            className="w-full py-2.5 px-3 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-lg transition-colors text-sm font-medium flex items-center justify-center gap-2"
           >
             <LogOut size={14} />
             {sidebarOpen && t('nav.logout')}
@@ -213,10 +213,10 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
               <Menu size={18} className="text-white/60" />
             </button>
             <div>
-              <h1 className="text-sm md:text-base font-semibold text-white truncate max-w-[200px] md:max-w-none">
+              <h1 className="text-base md:text-lg font-semibold text-white truncate max-w-[200px] md:max-w-none">
                 {t(filteredMenuItems.find(item => item.path === currentPath)?.labelKey as any) || 'Dashboard'}
               </h1>
-              <p className="text-[10px] md:text-xs text-white/30 hidden sm:block">
+              <p className="text-xs md:text-sm text-white/30 hidden sm:block">
                 {format(new Date(), 'EEEE, dd MMMM yyyy')}
               </p>
             </div>
@@ -226,7 +226,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
             {/* Language toggle */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.06] text-white/50 hover:text-white hover:bg-white/[0.08] transition-all text-xs"
+              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.06] text-white/50 hover:text-white hover:bg-white/[0.08] transition-all text-sm"
             >
               <Globe size={13} />
               <span className="hidden sm:inline">{language === 'id' ? 'EN' : 'ID'}</span>
@@ -240,7 +240,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
               >
                 <Bell size={17} className="text-white/50" />
                 {unreadCount > 0 && (
-                  <span className="absolute top-1 right-1 bg-red-500 text-white text-[9px] rounded-full w-4 h-4 flex items-center justify-center font-bold">
+                  <span className="absolute top-1 right-1 bg-red-500 text-white text-[11px] rounded-full w-4 h-4 flex items-center justify-center font-bold">
                     {unreadCount}
                   </span>
                 )}
@@ -268,8 +268,8 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
                             <h4 className="font-medium text-xs">{notif.title}</h4>
                             {!notif.read && <span className="w-1.5 h-1.5 bg-[#00aeff] rounded-full mt-1 shrink-0" />}
                           </div>
-                          <p className="text-[10px] text-white/40">{notif.message}</p>
-                          <p className="text-[10px] text-white/20 mt-1">{format(new Date(notif.createdAt), 'dd/MM/yyyy HH:mm')}</p>
+                          <p className="text-xs text-white/40">{notif.message}</p>
+                          <p className="text-xs text-white/20 mt-1">{format(new Date(notif.createdAt), 'dd/MM/yyyy HH:mm')}</p>
                         </div>
                       ))
                     )}
