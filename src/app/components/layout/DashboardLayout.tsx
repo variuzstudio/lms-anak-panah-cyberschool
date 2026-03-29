@@ -6,7 +6,8 @@ import { useLanguage } from '../../context/LanguageContext';
 import {
   Menu, Bell, X, Home, Users, BookOpen, Calendar, ClipboardList,
   GraduationCap, DollarSign, MessageSquare, FileText, Settings,
-  ChevronLeft, UserCheck, FileCheck, TrendingUp, Award, Globe, LogOut
+  ChevronLeft, UserCheck, FileCheck, TrendingUp, Award, Globe, LogOut,
+  Video
 } from 'lucide-react';
 import { cn } from '../ui/utils';
 import { format } from 'date-fns';
@@ -31,6 +32,7 @@ const menuItems: MenuItem[] = [
   { icon: <UserCheck size={18} />, labelKey: 'nav.absensi', path: 'absensi', roles: ['admin', 'guru', 'murid'] },
   { icon: <TrendingUp size={18} />, labelKey: 'nav.laporan', path: 'laporan', roles: ['admin', 'guru', 'orangtua'] },
   { icon: <DollarSign size={18} />, labelKey: 'nav.pembayaran', path: 'pembayaran', roles: ['admin', 'murid', 'orangtua'] },
+  { icon: <Video size={18} />, labelKey: 'nav.meeting', path: 'meeting', roles: ['admin', 'guru', 'murid', 'orangtua'] },
   { icon: <MessageSquare size={18} />, labelKey: 'nav.forum', path: 'forum', roles: ['admin', 'guru', 'murid', 'orangtua'] },
   { icon: <Settings size={18} />, labelKey: 'nav.pengaturan', path: 'pengaturan', roles: ['admin', 'guru', 'murid', 'orangtua'] },
 ];
@@ -104,7 +106,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
         {/* Logo */}
         <div className="flex flex-col border-b border-white/[0.08] shrink-0 px-3 pt-2 pb-3">
           <div className="flex items-start gap-2">
-            <img src="/logo.svg" alt="Logo" className={cn("transition-all flex-1 min-w-0", sidebarOpen ? "h-auto" : "h-7 w-auto mx-auto")} />
+            <img src="/logo-sidebar.svg" alt="Logo" className={cn("transition-all flex-1 min-w-0", sidebarOpen ? "h-auto" : "h-7 w-auto mx-auto")} />
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
               className="p-1.5 hover:bg-white/[0.06] rounded-lg transition-colors hidden md:flex items-center justify-center shrink-0 mt-1"

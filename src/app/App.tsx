@@ -15,6 +15,7 @@ import NilaiPage from './pages/NilaiPage';
 import AbsensiPage from './pages/AbsensiPage';
 import LaporanPage from './pages/LaporanPage';
 import PembayaranPage from './pages/PembayaranPage';
+import MeetingPage from './pages/MeetingPage';
 import ForumPage from './pages/ForumPage';
 import PengaturanPage from './pages/PengaturanPage';
 import DashboardLayout from './components/layout/DashboardLayout';
@@ -43,6 +44,7 @@ function AppContent() {
       case 'absensi': return <AbsensiPage />;
       case 'laporan': return <LaporanPage />;
       case 'pembayaran': return <PembayaranPage />;
+      case 'meeting': return <MeetingPage />;
       case 'forum': return <ForumPage />;
       case 'pengaturan': return <PengaturanPage />;
       default: return <Dashboard />;
