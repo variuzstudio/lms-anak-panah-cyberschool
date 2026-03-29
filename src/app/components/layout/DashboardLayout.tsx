@@ -79,23 +79,26 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
   };
 
   return (
-    <div className="flex h-screen bg-[#060b18] text-white overflow-hidden font-['Inter',sans-serif]">
+    <div className="flex h-screen bg-[#050a15] text-white overflow-hidden font-['Inter',sans-serif]">
       {/* Ambient glow */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-[-20%] left-[-5%] w-[400px] h-[400px] rounded-full blur-[150px]" style={{ backgroundColor: getRoleColor() + '08' }} />
-        <div className="absolute bottom-[-10%] right-[-5%] w-[300px] h-[300px] bg-[#c800ff]/5 rounded-full blur-[120px]" />
+        <div className="absolute top-[-20%] left-[-5%] w-[500px] h-[500px] rounded-full blur-[180px]" style={{ backgroundColor: getRoleColor() + '0c' }} />
+        <div className="absolute bottom-[-10%] right-[-5%] w-[400px] h-[400px] bg-[#c800ff]/8 rounded-full blur-[150px]" />
+        <div className="absolute top-[50%] left-[30%] w-[300px] h-[300px] bg-[#1aff00]/4 rounded-full blur-[140px]" />
       </div>
 
       {/* Sidebar */}
       <aside className={cn(
-        "relative z-30 h-full flex flex-col transition-all duration-300 bg-white/[0.02] backdrop-blur-xl border-r border-white/[0.06]",
+        "relative z-30 h-full flex flex-col transition-all duration-300 bg-[#0a0f1e]/90 backdrop-blur-2xl border-r border-white/[0.08]",
         sidebarOpen ? "w-60" : "w-[68px]",
         "fixed md:relative",
         mobileMenuOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
-      )}>
+      )}
+        style={{ boxShadow: '1px 0 20px rgba(0,0,0,0.3)' }}
+      >
         {/* Logo */}
-        <div className="h-16 flex items-center gap-3 px-4 border-b border-white/[0.06] shrink-0">
-          <img src="/logo.png" alt="Logo" className="h-8 w-auto shrink-0" />
+        <div className="h-16 flex items-center gap-3 px-4 border-b border-white/[0.08] shrink-0">
+          <img src="/logo.png" alt="Logo" className="h-8 w-auto shrink-0" style={{ mixBlendMode: 'screen' }} />
           {sidebarOpen && (
             <div className="min-w-0">
               <p className="text-xs font-bold text-white truncate leading-tight">Anak Panah</p>
@@ -128,10 +131,14 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
                 className={cn(
                   "flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all w-full group",
                   isActive
-                    ? "bg-white/[0.08] text-white"
-                    : "text-white/40 hover:bg-white/[0.04] hover:text-white/70"
+                    ? "text-white"
+                    : "text-white/40 hover:bg-white/[0.05] hover:text-white/70"
                 )}
-                style={isActive ? { boxShadow: `inset 3px 0 0 ${color}` } : undefined}
+                style={isActive ? {
+                  background: `linear-gradient(135deg, ${color}15, ${color}08)`,
+                  border: `1px solid ${color}25`,
+                  boxShadow: `inset 3px 0 0 ${color}, 0 0 12px ${color}10`,
+                } : { border: '1px solid transparent' }}
               >
                 <div className="shrink-0 flex items-center justify-center" style={isActive ? { color } : undefined}>
                   {item.icon}
@@ -185,7 +192,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
       {/* Main */}
       <div className="flex-1 flex flex-col overflow-hidden relative z-10">
         {/* Header */}
-        <header className="h-16 shrink-0 bg-white/[0.02] backdrop-blur-xl border-b border-white/[0.06] flex items-center justify-between px-4 md:px-6">
+        <header className="h-16 shrink-0 bg-[#0a0f1e]/80 backdrop-blur-2xl border-b border-white/[0.08] flex items-center justify-between px-4 md:px-6" style={{ boxShadow: '0 1px 20px rgba(0,0,0,0.2)' }}>
           <div className="flex items-center gap-3">
             <button onClick={() => setMobileMenuOpen(true)} className="p-2 hover:bg-white/[0.06] rounded-lg transition-colors md:hidden">
               <Menu size={18} className="text-white/60" />
@@ -225,7 +232,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
               </button>
 
               {notificationOpen && (
-                <div className="absolute right-0 mt-2 w-72 sm:w-80 bg-[#0d1238]/95 backdrop-blur-xl border border-white/[0.08] rounded-xl shadow-2xl z-50 max-h-80 overflow-y-auto">
+                <div className="absolute right-0 mt-2 w-72 sm:w-80 bg-[#0c1020]/95 backdrop-blur-2xl border border-white/[0.10] rounded-xl z-50 max-h-80 overflow-y-auto" style={{ boxShadow: '0 8px 40px rgba(0,0,0,0.5), 0 0 1px rgba(255,255,255,0.1)' }}>
                   <div className="p-3 border-b border-white/[0.06]">
                     <h3 className="font-semibold text-sm">{t('nav.notifications')}</h3>
                   </div>
