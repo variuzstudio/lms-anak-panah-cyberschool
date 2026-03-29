@@ -104,24 +104,24 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
         }}
       >
         {/* Logo */}
-        <div className="flex flex-col items-center border-b border-white/[0.08] shrink-0 px-3 py-3">
-          <div className="flex items-center w-full">
-            <img src="/logo.svg" alt="Logo" className={cn("shrink-0 transition-all", sidebarOpen ? "h-10 w-auto" : "h-7 w-auto")} />
+        <div className="flex flex-col border-b border-white/[0.08] shrink-0 px-3 py-3">
+          <div className="flex items-center justify-end gap-2 mb-1">
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="ml-auto p-1.5 hover:bg-white/[0.06] rounded-lg transition-colors hidden md:flex items-center justify-center"
+              className="p-1.5 hover:bg-white/[0.06] rounded-lg transition-colors hidden md:flex items-center justify-center"
             >
               {sidebarOpen ? <ChevronLeft size={16} className="text-white/40" /> : <Menu size={16} className="text-white/40" />}
             </button>
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="ml-auto p-1.5 hover:bg-white/[0.06] rounded-lg transition-colors md:hidden"
+              className="p-1.5 hover:bg-white/[0.06] rounded-lg transition-colors md:hidden"
             >
               <X size={16} className="text-white/40" />
             </button>
           </div>
+          <img src="/logo.svg" alt="Logo" className={cn("transition-all", sidebarOpen ? "w-full h-auto" : "h-7 w-auto mx-auto")} />
           {sidebarOpen && (
-            <p className="text-[9px] text-white/40 tracking-widest uppercase mt-1.5 font-['Orbitron',sans-serif]">Learning Management System</p>
+            <p className="text-[9px] text-white/40 tracking-widest uppercase mt-2 font-['Orbitron',sans-serif] text-center">Learning Management System</p>
           )}
         </div>
 
