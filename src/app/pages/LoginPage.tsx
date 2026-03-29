@@ -67,25 +67,18 @@ export default function LoginPage() {
         </div>
 
         {/* Main Glass Card */}
-        <div className="w-full max-w-lg relative">
-          {/* Outer border glow */}
-          <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-[#00aeff]/40 via-white/[0.08] to-[#c800ff]/30" />
-
-          {/* Glass card */}
+        <div className="w-full max-w-lg">
           <div
-            className="relative rounded-2xl overflow-hidden"
+            className="rounded-2xl p-[1.5px]"
             style={{
-              background: 'rgba(10, 14, 30, 0.45)',
-              backdropFilter: 'blur(24px) saturate(1.2)',
-              WebkitBackdropFilter: 'blur(24px) saturate(1.2)',
-              boxShadow: '0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08), inset 0 -1px 0 rgba(255,255,255,0.02)',
-              border: '1px solid rgba(255,255,255,0.10)',
+              background: 'linear-gradient(160deg, rgba(0,174,255,0.7), rgba(0,174,255,0.15) 40%, rgba(200,0,255,0.2) 70%, rgba(200,0,255,0.6))',
+              boxShadow: '0 0 20px rgba(0,174,255,0.12), 0 0 40px rgba(200,0,255,0.08)',
             }}
           >
-            {/* Top shine */}
-            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-            {/* Inner gradient overlay for depth */}
-            <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] to-transparent pointer-events-none" />
+          <div
+            className="relative rounded-2xl overflow-hidden"
+            style={{ background: 'linear-gradient(135deg, #0d1117 0%, #111827 100%)' }}
+          >
 
             <div className="relative p-6 sm:p-8 md:p-10">
               {!selectedRole ? (
@@ -96,36 +89,29 @@ export default function LoginPage() {
 
                   <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
                     {roles.map(({ key, icon: Icon, color }) => (
-                      <button
-                        key={key}
-                        onClick={() => handleRoleSelect(key)}
-                        className="group relative flex flex-col items-center gap-2 sm:gap-3 p-4 sm:p-6 rounded-xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                      <div key={key} className="rounded-2xl p-[1.5px] transition-all duration-300 hover:scale-[1.02]"
                         style={{
-                          background: `rgba(10, 14, 30, 0.4)`,
-                          backdropFilter: 'blur(12px)',
-                          border: `1px solid ${color}25`,
-                          boxShadow: `inset 0 1px 0 rgba(255,255,255,0.04), 0 0 0 0 ${color}00`,
+                          background: `linear-gradient(135deg, ${color}80, ${color}20 50%, ${color}60)`,
+                          boxShadow: `0 0 12px ${color}15`,
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.borderColor = color + '50';
-                          e.currentTarget.style.boxShadow = `inset 0 1px 0 rgba(255,255,255,0.06), 0 0 25px ${color}20, 0 0 60px ${color}08`;
-                          e.currentTarget.style.background = `linear-gradient(135deg, ${color}15, rgba(10,14,30,0.5))`;
+                          e.currentTarget.style.boxShadow = `0 0 25px ${color}25, 0 0 50px ${color}10`;
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.borderColor = color + '25';
-                          e.currentTarget.style.boxShadow = `inset 0 1px 0 rgba(255,255,255,0.04), 0 0 0 0 ${color}00`;
-                          e.currentTarget.style.background = `rgba(10, 14, 30, 0.4)`;
-                        }}
-                      >
-                        {/* Top shine */}
-                        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: color + '18' }}>
-                          <Icon size={20} style={{ color }} className="sm:w-6 sm:h-6" />
-                        </div>
-                        <span className="font-['Inter',sans-serif] text-sm sm:text-base font-medium text-white/80 group-hover:text-white transition-colors">
-                          {getRoleLabel(key)}
-                        </span>
-                      </button>
+                          e.currentTarget.style.boxShadow = `0 0 12px ${color}15`;
+                        }}>
+                        <button
+                          onClick={() => handleRoleSelect(key)}
+                          className="group relative flex flex-col items-center gap-2 sm:gap-3 p-4 sm:p-6 rounded-2xl w-full transition-all duration-300"
+                          style={{ background: 'linear-gradient(135deg, #0d1117 0%, #111827 100%)' }}>
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: color + '15' }}>
+                            <Icon size={20} style={{ color }} className="sm:w-6 sm:h-6" />
+                          </div>
+                          <span className="font-['Inter',sans-serif] text-sm sm:text-base font-medium text-white/80 group-hover:text-white transition-colors">
+                            {getRoleLabel(key)}
+                          </span>
+                        </button>
+                      </div>
                     ))}
                   </div>
 
@@ -184,6 +170,7 @@ export default function LoginPage() {
                 </form>
               )}
             </div>
+          </div>
           </div>
         </div>
 

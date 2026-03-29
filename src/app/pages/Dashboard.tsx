@@ -20,32 +20,27 @@ interface StatCardProps {
 
 function StatCard({ title, value, icon, color, trend }: StatCardProps) {
   return (
-    <div className="group relative rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02]">
-      {/* Glow border */}
-      <div className="absolute -inset-px rounded-xl opacity-50 group-hover:opacity-80 transition-opacity duration-300"
-        style={{ background: `linear-gradient(135deg, ${color}50, transparent 50%, ${color}20)` }} />
-      {/* Card body */}
-      <div className="relative rounded-xl p-4 md:p-5 h-full"
+    <div className="group relative rounded-2xl p-[1.5px] transition-all duration-300 hover:scale-[1.02]"
+      style={{
+        background: `linear-gradient(135deg, ${color}90, ${color}30 40%, #c800ff40 70%, #c800ff80)`,
+        boxShadow: `0 0 15px ${color}20, 0 0 30px ${color}08`,
+      }}>
+      <div className="relative rounded-2xl p-4 md:p-5 h-full"
         style={{
-          background: 'rgba(10, 14, 30, 0.45)',
-          backdropFilter: 'blur(20px) saturate(1.2)',
-          WebkitBackdropFilter: 'blur(20px) saturate(1.2)',
-          border: '1px solid rgba(255,255,255,0.08)',
-          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06), 0 4px 24px rgba(0,0,0,0.3)',
+          background: 'linear-gradient(135deg, #0d1117 0%, #111827 100%)',
         }}>
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
         <div className="relative flex items-center justify-between mb-3">
           <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg flex items-center justify-center"
-            style={{ backgroundColor: color + '18', boxShadow: `0 0 15px ${color}15` }}>
+            style={{ backgroundColor: color + '15' }}>
             <div style={{ color }}>{icon}</div>
           </div>
           {trend && (
-            <div className="text-[#1aff00] text-xs md:text-xs flex items-center gap-1 bg-[#1aff00]/10 px-2 py-0.5 rounded-full border border-[#1aff00]/15">
+            <div className="text-[#1aff00] text-xs flex items-center gap-1 bg-[#1aff00]/10 px-2 py-0.5 rounded-full border border-[#1aff00]/15">
               <TrendingUp size={11} />{trend}
             </div>
           )}
         </div>
-        <p className="text-white/40 text-xs md:text-sm mb-0.5">{title}</p>
+        <p className="text-white/50 text-xs md:text-sm mb-0.5">{title}</p>
         <p className="text-2xl md:text-3xl font-bold text-white">{value}</p>
       </div>
     </div>
@@ -62,18 +57,20 @@ interface QuickActionProps {
 function QuickAction({ title, description, onClick, color }: QuickActionProps) {
   return (
     <button onClick={onClick}
-      className="group relative rounded-xl overflow-hidden transition-all duration-300 cursor-pointer w-full text-left hover:scale-[1.02]">
-      <div className="absolute -inset-px rounded-xl opacity-0 group-hover:opacity-60 transition-opacity duration-300"
-        style={{ background: `linear-gradient(135deg, ${color}35, transparent 60%, ${color}12)` }} />
-      <div className="relative rounded-xl p-4 md:p-5 h-full"
-        style={{
-          background: 'rgba(10, 14, 30, 0.4)',
-          backdropFilter: 'blur(16px) saturate(1.1)',
-          WebkitBackdropFilter: 'blur(16px) saturate(1.1)',
-          border: '1px solid rgba(255,255,255,0.06)',
-          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05)',
-        }}>
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
+      className="group relative rounded-2xl p-[1px] transition-all duration-300 cursor-pointer w-full text-left hover:scale-[1.02]"
+      style={{
+        background: `linear-gradient(135deg, ${color}50, transparent 50%, ${color}20)`,
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.background = `linear-gradient(135deg, ${color}80, ${color}30 50%, #c800ff50)`;
+        e.currentTarget.style.boxShadow = `0 0 20px ${color}15`;
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.background = `linear-gradient(135deg, ${color}50, transparent 50%, ${color}20)`;
+        e.currentTarget.style.boxShadow = 'none';
+      }}>
+      <div className="relative rounded-2xl p-4 md:p-5 h-full"
+        style={{ background: 'linear-gradient(135deg, #0d1117 0%, #111827 100%)' }}>
         <div className="w-1 h-6 rounded-full absolute left-0 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" style={{ backgroundColor: color, boxShadow: `0 0 10px ${color}60` }} />
         <h3 className="text-sm md:text-base font-semibold mb-1 text-white/80 group-hover:text-white transition-colors">{title}</h3>
         <p className="text-xs md:text-sm text-white/30">{description}</p>
@@ -85,18 +82,13 @@ function QuickAction({ title, description, onClick, color }: QuickActionProps) {
 function GlassCard({ children, className = '', glowColor }: { children: React.ReactNode; className?: string; glowColor?: string }) {
   const glow = glowColor || '#00aeff';
   return (
-    <div className={`relative rounded-xl overflow-hidden ${className}`}>
-      <div className="absolute -inset-px rounded-xl"
-        style={{ background: `linear-gradient(180deg, ${glow}30, transparent 40%, ${glow}10)` }} />
-      <div className="relative rounded-xl p-4 md:p-6 h-full"
-        style={{
-          background: 'rgba(10, 14, 30, 0.45)',
-          backdropFilter: 'blur(20px) saturate(1.2)',
-          WebkitBackdropFilter: 'blur(20px) saturate(1.2)',
-          border: '1px solid rgba(255,255,255,0.08)',
-          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06), 0 4px 24px rgba(0,0,0,0.3)',
-        }}>
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+    <div className={`relative rounded-2xl p-[1.5px] ${className}`}
+      style={{
+        background: `linear-gradient(160deg, ${glow}70, ${glow}20 40%, #c800ff30 70%, #c800ff60)`,
+        boxShadow: `0 0 12px ${glow}12`,
+      }}>
+      <div className="relative rounded-2xl p-4 md:p-6 h-full"
+        style={{ background: 'linear-gradient(135deg, #0d1117 0%, #111827 100%)' }}>
         {children}
       </div>
     </div>

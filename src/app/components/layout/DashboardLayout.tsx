@@ -96,11 +96,9 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
         mobileMenuOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
       )}
         style={{
-          background: 'rgba(8, 12, 24, 0.55)',
-          backdropFilter: 'blur(24px) saturate(1.2)',
-          WebkitBackdropFilter: 'blur(24px) saturate(1.2)',
-          borderRight: '1px solid rgba(255,255,255,0.08)',
-          boxShadow: '1px 0 30px rgba(0,0,0,0.4)',
+          background: 'linear-gradient(180deg, #0d1117 0%, #0f1520 100%)',
+          borderRight: '1px solid rgba(255,255,255,0.06)',
+          boxShadow: '1px 0 30px rgba(0,0,0,0.5)',
         }}
       >
         {/* Logo */}
@@ -201,11 +199,9 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
         <header
           className="h-16 shrink-0 flex items-center justify-between px-4 md:px-6"
           style={{
-            background: 'rgba(8, 12, 24, 0.5)',
-            backdropFilter: 'blur(24px) saturate(1.2)',
-            WebkitBackdropFilter: 'blur(24px) saturate(1.2)',
-            borderBottom: '1px solid rgba(255,255,255,0.08)',
-            boxShadow: '0 1px 20px rgba(0,0,0,0.3)',
+            background: 'linear-gradient(90deg, #0d1117 0%, #111827 100%)',
+            borderBottom: '1px solid rgba(255,255,255,0.06)',
+            boxShadow: '0 1px 20px rgba(0,0,0,0.4)',
           }}
         >
           <div className="flex items-center gap-3">
