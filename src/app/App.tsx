@@ -59,7 +59,7 @@ function AppContent() {
 }
 
 function Watermark() {
-  const text = 'ANAK PANAH CYBERSCHOOL';
+  const text = 'VARIUZSTUDIO';
   const rows = 12;
   const cols = 6;
 
