@@ -26,7 +26,7 @@ export default function PengaturanPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-['Inter',sans-serif]">PENGATURAN</h1>
+        <h1 className="text-2xl font-['Orbitron',sans-serif]">PENGATURAN</h1>
         <p className="text-gray-400 text-sm mt-1">Kelola pengaturan akun dan preferensi</p>
       </div>
 
@@ -35,7 +35,7 @@ export default function PengaturanPage() {
         <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg p-6">
           <div className="flex items-center gap-3 mb-6">
             <User size={24} className="text-[#00aeff]" />
-            <h3 className="font-['Inter',sans-serif] text-lg">PROFIL</h3>
+            <h3 className="font-['Orbitron',sans-serif] text-lg">PROFIL</h3>
           </div>
           <form onSubmit={handleSaveProfile} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -82,7 +82,7 @@ export default function PengaturanPage() {
         <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg p-6">
           <div className="flex items-center gap-3 mb-6">
             <Lock size={24} className="text-[#1aff00]" />
-            <h3 className="font-['Inter',sans-serif] text-lg">KEAMANAN</h3>
+            <h3 className="font-['Orbitron',sans-serif] text-lg">KEAMANAN</h3>
           </div>
           <form onSubmit={handleChangePassword} className="space-y-4">
             <div>
@@ -119,7 +119,7 @@ export default function PengaturanPage() {
         <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg p-6">
           <div className="flex items-center gap-3 mb-6">
             <Bell size={24} className="text-[#c800ff]" />
-            <h3 className="font-['Inter',sans-serif] text-lg">NOTIFIKASI</h3>
+            <h3 className="font-['Orbitron',sans-serif] text-lg">NOTIFIKASI</h3>
           </div>
           <div className="space-y-4">
             <div className="flex items-center justify-between">
@@ -149,7 +149,7 @@ export default function PengaturanPage() {
         <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg p-6">
           <div className="flex items-center gap-3 mb-6">
             <Globe size={24} className="text-[#ffb700]" />
-            <h3 className="font-['Inter',sans-serif] text-lg">TAMPILAN</h3>
+            <h3 className="font-['Orbitron',sans-serif] text-lg">TAMPILAN</h3>
           </div>
           <div className="space-y-4">
             <div className="flex items-center justify-between">

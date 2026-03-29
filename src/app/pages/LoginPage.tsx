@@ -61,10 +61,10 @@ export default function LoginPage() {
             className="h-16 sm:h-20 md:h-24 mb-4"
             style={{ filter: 'drop-shadow(0 0 20px rgba(0,174,255,0.35))' }}
           />
-          <h1 className="font-['Inter',sans-serif] text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wide text-center">
+          <h1 className="font-['Orbitron',sans-serif] text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wide text-center">
             {t('login.schoolName')}
           </h1>
-          <p className="text-white/40 text-xs sm:text-sm mt-1 font-['Inter',sans-serif] text-center">
+          <p className="text-white/40 text-xs sm:text-sm mt-1 font-['Orbitron',sans-serif] text-center">
             {t('login.lms')}
           </p>
         </div>
@@ -93,7 +93,7 @@ export default function LoginPage() {
             <div className="relative p-6 sm:p-8 md:p-10">
               {!selectedRole ? (
                 <>
-                  <h2 className="font-['Inter',sans-serif] text-base sm:text-lg font-semibold text-white text-center mb-6 sm:mb-8">
+                  <h2 className="font-['Orbitron',sans-serif] text-base sm:text-lg font-semibold text-white text-center mb-6 sm:mb-8">
                     {t('login.selectRole')}
                   </h2>
 
@@ -125,7 +125,7 @@ export default function LoginPage() {
                         <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: color + '18' }}>
                           <Icon size={20} style={{ color }} className="sm:w-6 sm:h-6" />
                         </div>
-                        <span className="font-['Inter',sans-serif] text-xs sm:text-sm font-medium text-white/80 group-hover:text-white transition-colors">
+                        <span className="font-['Orbitron',sans-serif] text-xs sm:text-sm font-medium text-white/80 group-hover:text-white transition-colors">
                           {getRoleLabel(key)}
                         </span>
                       </button>
@@ -136,24 +136,24 @@ export default function LoginPage() {
                     className="rounded-xl p-3 sm:p-4 text-center"
                     style={{ background: 'rgba(0,174,255,0.06)', border: '1px solid rgba(0,174,255,0.12)' }}
                   >
-                    <p className="text-white/50 text-[10px] sm:text-xs font-['Inter',sans-serif]">
+                    <p className="text-white/50 text-[10px] sm:text-xs font-['Orbitron',sans-serif]">
                       {t('login.demoCredentials')} username: admin/guru/murid/orangtua | password: [role]123
                     </p>
                   </div>
                 </>
               ) : (
                 <form onSubmit={handleLogin} className="space-y-5 sm:space-y-6">
-                  <button type="button" onClick={() => handleRoleSelect(null)} className="text-white/50 hover:text-white text-xs sm:text-sm flex items-center gap-1 transition-colors font-['Inter',sans-serif]">
+                  <button type="button" onClick={() => handleRoleSelect(null)} className="text-white/50 hover:text-white text-xs sm:text-sm flex items-center gap-1 transition-colors font-['Orbitron',sans-serif]">
                     {t('login.backToRole')}
                   </button>
                   <div className="text-center">
-                    <h2 className="font-['Inter',sans-serif] text-base sm:text-lg font-semibold text-white mb-2">
+                    <h2 className="font-['Orbitron',sans-serif] text-base sm:text-lg font-semibold text-white mb-2">
                       {t('login.loginAs')} {getRoleLabel(selectedRole).toUpperCase()}
                     </h2>
                     <div className="h-0.5 w-16 mx-auto rounded-full" style={{ backgroundColor: roleColor }} />
                   </div>
                   <div className="space-y-1.5">
-                    <label className="block text-white/60 text-xs sm:text-sm font-['Inter',sans-serif] font-medium">{t('login.username')}</label>
+                    <label className="block text-white/60 text-xs sm:text-sm font-['Orbitron',sans-serif] font-medium">{t('login.username')}</label>
                     <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}
                       className="w-full rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none transition-all"
                       style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
@@ -162,7 +162,7 @@ export default function LoginPage() {
                       placeholder={`${t('login.enterUsername')} ${getRoleLabel(selectedRole).toLowerCase()}`} required />
                   </div>
                   <div className="space-y-1.5">
-                    <label className="block text-white/60 text-xs sm:text-sm font-['Inter',sans-serif] font-medium">{t('login.password')}</label>
+                    <label className="block text-white/60 text-xs sm:text-sm font-['Orbitron',sans-serif] font-medium">{t('login.password')}</label>
                     <div className="relative">
                       <input type={showPassword ? 'text' : 'password'} value={password} onChange={(e) => setPassword(e.target.value)}
                         className="w-full rounded-xl px-4 py-3 pr-11 text-sm text-white placeholder-white/20 focus:outline-none transition-all"
@@ -175,12 +175,12 @@ export default function LoginPage() {
                       </button>
                     </div>
                   </div>
-                  <button type="submit" className="w-full rounded-xl py-3 font-['Inter',sans-serif] text-sm font-semibold text-white flex items-center justify-center gap-2 transition-all hover:brightness-125"
+                  <button type="submit" className="w-full rounded-xl py-3 font-['Orbitron',sans-serif] text-sm font-semibold text-white flex items-center justify-center gap-2 transition-all hover:brightness-125"
                     style={{ backgroundColor: roleColor + '25', border: `1px solid ${roleColor}40`, boxShadow: `0 0 20px ${roleColor}15` }}>
                     <LogIn size={16} /> {t('login.loginButton')}
                   </button>
                   <div className="rounded-xl p-3 text-center" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
-                    <p className="text-white/40 text-[10px] sm:text-xs font-['Inter',sans-serif]">
+                    <p className="text-white/40 text-[10px] sm:text-xs font-['Orbitron',sans-serif]">
                       Demo: <span className="text-white/60">{selectedRole}</span> / <span className="text-white/60">{selectedRole}123</span>
                     </p>
                   </div>
@@ -190,7 +190,7 @@ export default function LoginPage() {
           </div>
         </div>
 
-        <p className="mt-6 text-white/20 text-[10px] sm:text-xs font-['Inter',sans-serif]">© 2026 Anak Panah Cyberschool. All rights reserved.</p>
+        <p className="mt-6 text-white/20 text-[10px] sm:text-xs font-['Orbitron',sans-serif]">© 2026 Anak Panah Cyberschool. All rights reserved.</p>
       </div>
     </div>
   );

@@ -36,7 +36,7 @@ export default function MataPelajaranPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-['Inter',sans-serif]">MATA PELAJARAN</h1>
+          <h1 className="text-2xl font-['Orbitron',sans-serif]">MATA PELAJARAN</h1>
           <p className="text-gray-400 text-sm mt-1">Kelola mata pelajaran sekolah</p>
         </div>
         <Button className="bg-[#1aff00] hover:bg-[#1aff00]/80 text-black">
@@ -66,7 +66,7 @@ export default function MataPelajaranPage() {
                   <BookOpen size={24} className="text-[#1aff00]" />
                 </div>
                 <div>
-                  <h3 className="font-['Inter',sans-serif] text-lg">{subject.name}</h3>
+                  <h3 className="font-['Orbitron',sans-serif] text-lg">{subject.name}</h3>
                   <p className="text-sm text-gray-400">{subject.code}</p>
                 </div>
               </div>

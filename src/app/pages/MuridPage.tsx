@@ -51,13 +51,13 @@ export default function MuridPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-['Inter',sans-serif]">DATA SISWA</h1>
+          <h1 className="text-3xl font-['Orbitron',sans-serif]">DATA SISWA</h1>
           <p className="text-gray-400 mt-1">Kelola data siswa sekolah</p>
         </div>
         {hasPermission('edit_student_data') && (
           <button
             onClick={() => setIsAddDialogOpen(true)}
-            className="bg-[#00aeff] hover:bg-[#00aeff]/80 text-white px-6 py-3 rounded-lg font-['Inter',sans-serif] text-sm flex items-center gap-2 transition-all"
+            className="bg-[#00aeff] hover:bg-[#00aeff]/80 text-white px-6 py-3 rounded-lg font-['Orbitron',sans-serif] text-sm flex items-center gap-2 transition-all"
           >
             <Plus size={20} />
             TAMBAH SISWA
@@ -137,15 +137,15 @@ export default function MuridPage() {
           <table className="w-full">
             <thead className="bg-white/[0.04]">
               <tr>
-                <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">NIS</th>
-                <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">NAMA</th>
-                <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">KELAS</th>
-                <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">EMAIL</th>
-                <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">TELEPON</th>
-                <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">ORANG TUA</th>
-                <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">STATUS</th>
+                <th className="px-6 py-4 text-left font-['Orbitron',sans-serif] text-sm">NIS</th>
+                <th className="px-6 py-4 text-left font-['Orbitron',sans-serif] text-sm">NAMA</th>
+                <th className="px-6 py-4 text-left font-['Orbitron',sans-serif] text-sm">KELAS</th>
+                <th className="px-6 py-4 text-left font-['Orbitron',sans-serif] text-sm">EMAIL</th>
+                <th className="px-6 py-4 text-left font-['Orbitron',sans-serif] text-sm">TELEPON</th>
+                <th className="px-6 py-4 text-left font-['Orbitron',sans-serif] text-sm">ORANG TUA</th>
+                <th className="px-6 py-4 text-left font-['Orbitron',sans-serif] text-sm">STATUS</th>
                 {hasPermission('edit_student_data') && (
-                  <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">AKSI</th>
+                  <th className="px-6 py-4 text-left font-['Orbitron',sans-serif] text-sm">AKSI</th>
                 )}
               </tr>
             </thead>

@@ -80,7 +80,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
   };
 
   return (
-    <div className="flex h-screen bg-[#050a15] text-white overflow-hidden font-['Inter',sans-serif]">
+    <div className="flex h-screen bg-[#050a15] text-white overflow-hidden font-['Orbitron',sans-serif]">
       {/* Ambient glow */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-[-20%] left-[-5%] w-[500px] h-[500px] rounded-full blur-[180px]" style={{ backgroundColor: getRoleColor() + '0c' }} />
