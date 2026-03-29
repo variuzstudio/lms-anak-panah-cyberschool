@@ -22,34 +22,26 @@ function StatCard({ title, value, icon, color, trend }: StatCardProps) {
   return (
     <div className="group relative rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02]">
       {/* Glow border */}
-      <div
-        className="absolute -inset-[0.5px] rounded-xl opacity-40 group-hover:opacity-70 transition-opacity duration-300"
-        style={{ background: `linear-gradient(135deg, ${color}40, transparent 50%, ${color}15)` }}
-      />
+      <div className="absolute -inset-px rounded-xl opacity-50 group-hover:opacity-80 transition-opacity duration-300"
+        style={{ background: `linear-gradient(135deg, ${color}50, transparent 50%, ${color}20)` }} />
       {/* Card body */}
-      <div
-        className="relative rounded-xl p-4 md:p-5 h-full"
+      <div className="relative rounded-xl p-4 md:p-5 h-full"
         style={{
-          background: `linear-gradient(135deg, rgba(12,18,32,0.9), rgba(12,18,32,0.7))`,
-          backdropFilter: 'blur(20px)',
-          border: '1px solid rgba(255,255,255,0.06)',
-          boxShadow: `inset 0 1px 0 rgba(255,255,255,0.05), 0 4px 20px rgba(0,0,0,0.3)`,
-        }}
-      >
-        {/* Subtle top highlight */}
-        <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent rounded-t-xl" />
-
+          background: 'rgba(10, 14, 30, 0.45)',
+          backdropFilter: 'blur(20px) saturate(1.2)',
+          WebkitBackdropFilter: 'blur(20px) saturate(1.2)',
+          border: '1px solid rgba(255,255,255,0.08)',
+          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06), 0 4px 24px rgba(0,0,0,0.3)',
+        }}>
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
         <div className="relative flex items-center justify-between mb-3">
-          <div
-            className="w-9 h-9 md:w-10 md:h-10 rounded-lg flex items-center justify-center"
-            style={{ backgroundColor: color + '18', boxShadow: `0 0 15px ${color}12` }}
-          >
+          <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg flex items-center justify-center"
+            style={{ backgroundColor: color + '18', boxShadow: `0 0 15px ${color}15` }}>
             <div style={{ color }}>{icon}</div>
           </div>
           {trend && (
             <div className="text-[#1aff00] text-[10px] md:text-xs flex items-center gap-1 bg-[#1aff00]/10 px-2 py-0.5 rounded-full border border-[#1aff00]/15">
-              <TrendingUp size={11} />
-              {trend}
+              <TrendingUp size={11} />{trend}
             </div>
           )}
         </div>
@@ -69,25 +61,20 @@ interface QuickActionProps {
 
 function QuickAction({ title, description, onClick, color }: QuickActionProps) {
   return (
-    <button
-      onClick={onClick}
-      className="group relative rounded-xl overflow-hidden transition-all duration-300 cursor-pointer w-full text-left hover:scale-[1.02]"
-    >
-      {/* Glow border on hover */}
-      <div
-        className="absolute -inset-[0.5px] rounded-xl opacity-0 group-hover:opacity-60 transition-opacity duration-300"
-        style={{ background: `linear-gradient(135deg, ${color}30, transparent 60%, ${color}10)` }}
-      />
-      <div
-        className="relative rounded-xl p-4 md:p-5 h-full"
+    <button onClick={onClick}
+      className="group relative rounded-xl overflow-hidden transition-all duration-300 cursor-pointer w-full text-left hover:scale-[1.02]">
+      <div className="absolute -inset-px rounded-xl opacity-0 group-hover:opacity-60 transition-opacity duration-300"
+        style={{ background: `linear-gradient(135deg, ${color}35, transparent 60%, ${color}12)` }} />
+      <div className="relative rounded-xl p-4 md:p-5 h-full"
         style={{
-          background: 'linear-gradient(135deg, rgba(12,18,32,0.8), rgba(12,18,32,0.6))',
-          backdropFilter: 'blur(16px)',
-          border: '1px solid rgba(255,255,255,0.05)',
-          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.04)',
-        }}
-      >
-        <div className="w-1 h-6 rounded-full absolute left-0 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" style={{ backgroundColor: color, boxShadow: `0 0 8px ${color}60` }} />
+          background: 'rgba(10, 14, 30, 0.4)',
+          backdropFilter: 'blur(16px) saturate(1.1)',
+          WebkitBackdropFilter: 'blur(16px) saturate(1.1)',
+          border: '1px solid rgba(255,255,255,0.06)',
+          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05)',
+        }}>
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
+        <div className="w-1 h-6 rounded-full absolute left-0 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" style={{ backgroundColor: color, boxShadow: `0 0 10px ${color}60` }} />
         <h3 className="text-xs md:text-sm font-semibold mb-1 text-white/80 group-hover:text-white transition-colors">{title}</h3>
         <p className="text-[10px] md:text-xs text-white/30">{description}</p>
       </div>
@@ -99,22 +86,17 @@ function GlassCard({ children, className = '', glowColor }: { children: React.Re
   const glow = glowColor || '#00aeff';
   return (
     <div className={`relative rounded-xl overflow-hidden ${className}`}>
-      {/* Subtle edge glow */}
-      <div
-        className="absolute -inset-[0.5px] rounded-xl"
-        style={{ background: `linear-gradient(180deg, ${glow}20, transparent 40%, ${glow}08)` }}
-      />
-      <div
-        className="relative rounded-xl p-4 md:p-6 h-full"
+      <div className="absolute -inset-px rounded-xl"
+        style={{ background: `linear-gradient(180deg, ${glow}30, transparent 40%, ${glow}10)` }} />
+      <div className="relative rounded-xl p-4 md:p-6 h-full"
         style={{
-          background: 'linear-gradient(135deg, rgba(12,18,32,0.9), rgba(12,18,32,0.7))',
-          backdropFilter: 'blur(20px)',
-          border: '1px solid rgba(255,255,255,0.07)',
-          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05), 0 4px 24px rgba(0,0,0,0.3)',
-        }}
-      >
-        {/* Top highlight line */}
-        <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/8 to-transparent rounded-t-xl" />
+          background: 'rgba(10, 14, 30, 0.45)',
+          backdropFilter: 'blur(20px) saturate(1.2)',
+          WebkitBackdropFilter: 'blur(20px) saturate(1.2)',
+          border: '1px solid rgba(255,255,255,0.08)',
+          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06), 0 4px 24px rgba(0,0,0,0.3)',
+        }}>
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
         {children}
       </div>
     </div>

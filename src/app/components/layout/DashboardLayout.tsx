@@ -2,6 +2,7 @@ import { ReactNode, useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { useNotifications } from '../../context/NotificationContext';
 import { useLanguage } from '../../context/LanguageContext';
+import TransparentLogo from '../TransparentLogo';
 import {
   Menu, Bell, X, Home, Users, BookOpen, Calendar, ClipboardList,
   GraduationCap, DollarSign, MessageSquare, FileText, Settings,
@@ -89,16 +90,22 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
 
       {/* Sidebar */}
       <aside className={cn(
-        "relative z-30 h-full flex flex-col transition-all duration-300 bg-[#0a0f1e]/90 backdrop-blur-2xl border-r border-white/[0.08]",
+        "relative z-30 h-full flex flex-col transition-all duration-300",
         sidebarOpen ? "w-60" : "w-[68px]",
         "fixed md:relative",
         mobileMenuOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
       )}
-        style={{ boxShadow: '1px 0 20px rgba(0,0,0,0.3)' }}
+        style={{
+          background: 'rgba(8, 12, 24, 0.55)',
+          backdropFilter: 'blur(24px) saturate(1.2)',
+          WebkitBackdropFilter: 'blur(24px) saturate(1.2)',
+          borderRight: '1px solid rgba(255,255,255,0.08)',
+          boxShadow: '1px 0 30px rgba(0,0,0,0.4)',
+        }}
       >
         {/* Logo */}
         <div className="h-16 flex items-center gap-3 px-4 border-b border-white/[0.08] shrink-0">
-          <img src="/logo.png" alt="Logo" className="h-8 w-auto shrink-0" style={{ mixBlendMode: 'screen' }} />
+          <TransparentLogo src="/logo.png" alt="Logo" className="h-8 w-auto shrink-0" threshold={50} />
           {sidebarOpen && (
             <div className="min-w-0">
               <p className="text-xs font-bold text-white truncate leading-tight">Anak Panah</p>
@@ -192,7 +199,16 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
       {/* Main */}
       <div className="flex-1 flex flex-col overflow-hidden relative z-10">
         {/* Header */}
-        <header className="h-16 shrink-0 bg-[#0a0f1e]/80 backdrop-blur-2xl border-b border-white/[0.08] flex items-center justify-between px-4 md:px-6" style={{ boxShadow: '0 1px 20px rgba(0,0,0,0.2)' }}>
+        <header
+          className="h-16 shrink-0 flex items-center justify-between px-4 md:px-6"
+          style={{
+            background: 'rgba(8, 12, 24, 0.5)',
+            backdropFilter: 'blur(24px) saturate(1.2)',
+            WebkitBackdropFilter: 'blur(24px) saturate(1.2)',
+            borderBottom: '1px solid rgba(255,255,255,0.08)',
+            boxShadow: '0 1px 20px rgba(0,0,0,0.3)',
+          }}
+        >
           <div className="flex items-center gap-3">
             <button onClick={() => setMobileMenuOpen(true)} className="p-2 hover:bg-white/[0.06] rounded-lg transition-colors md:hidden">
               <Menu size={18} className="text-white/60" />
