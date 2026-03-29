@@ -2,7 +2,7 @@ import { ReactNode, useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { useNotifications } from '../../context/NotificationContext';
 import { useLanguage } from '../../context/LanguageContext';
-import TransparentLogo from '../TransparentLogo';
+
 import {
   Menu, Bell, X, Home, Users, BookOpen, Calendar, ClipboardList,
   GraduationCap, DollarSign, MessageSquare, FileText, Settings,
@@ -105,7 +105,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
       >
         {/* Logo */}
         <div className="h-16 flex items-center gap-3 px-4 border-b border-white/[0.08] shrink-0">
-          <TransparentLogo src="/logo.png" alt="Logo" className="h-8 w-auto shrink-0" threshold={50} />
+          <img src="/logo.svg" alt="Logo" className="h-8 w-auto shrink-0" />
           {sidebarOpen && (
             <div className="min-w-0">
               <p className="text-xs font-bold text-white truncate leading-tight">Anak Panah</p>

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
-import TransparentLogo from '../components/TransparentLogo';
 import { toast } from 'sonner';
 import { Eye, EyeOff, LogIn, Shield, GraduationCap, BookOpen, Users, Globe } from 'lucide-react';
 
@@ -56,12 +55,11 @@ export default function LoginPage() {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-8 sm:py-12">
         {/* Logo */}
         <div className="flex flex-col items-center mb-8 sm:mb-10">
-          <TransparentLogo
-            src="/logo.png"
+          <img
+            src="/logo.svg"
             alt="Anak Panah Cyberschool"
             className="h-16 sm:h-20 md:h-24 mb-4"
             style={{ filter: 'drop-shadow(0 0 20px rgba(0,174,255,0.35))' }}
-            threshold={50}
           />
           <h1 className="font-['Inter',sans-serif] text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wide text-center">
             {t('login.schoolName')}
