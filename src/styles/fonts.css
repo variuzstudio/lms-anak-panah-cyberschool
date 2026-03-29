@@ -4,7 +4,8 @@
   font-family: 'Acumin Variable Concept';
   src: url('/fonts/AcuminVariableConcept.woff2') format('woff2'),
        url('/fonts/AcuminVariableConcept.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 100 900;
+  font-stretch: 75% 100%;
   font-style: normal;
   font-display: swap;
 }
