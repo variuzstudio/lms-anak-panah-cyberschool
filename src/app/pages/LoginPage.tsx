@@ -54,19 +54,16 @@ export default function LoginPage() {
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-8 sm:py-12">
         {/* Logo */}
-        <div className="flex flex-col items-center mb-8 sm:mb-10">
+        <div className="flex flex-col items-center mb-8 sm:mb-10 w-full max-w-lg">
           <img
             src="/logo.svg"
             alt="Anak Panah Cyberschool"
-            className="h-16 sm:h-20 md:h-24 mb-4"
+            className="w-full max-h-32 sm:max-h-40 md:max-h-44 object-contain mb-4"
             style={{ filter: 'drop-shadow(0 0 20px rgba(0,174,255,0.35))' }}
           />
-          <h1 className="font-['Orbitron',sans-serif] text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wide text-center">
-            {t('login.schoolName')}
+          <h1 className="font-['Orbitron',sans-serif] text-sm sm:text-base md:text-lg font-semibold text-white/60 tracking-widest text-center uppercase">
+            Learning Management System
           </h1>
-          <p className="text-white/40 text-xs sm:text-sm mt-1 font-['Orbitron',sans-serif] text-center">
-            {t('login.lms')}
-          </p>
         </div>
 
         {/* Main Glass Card */}
