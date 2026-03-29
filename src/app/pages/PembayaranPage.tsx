@@ -112,7 +112,7 @@ export default function PembayaranPage() {
     <div className="space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-3xl font-['Acumin_Variable_Concept',sans-serif]">PEMBAYARAN SPP</h1>
+        <h1 className="text-3xl font-['Inter',sans-serif]">PEMBAYARAN SPP</h1>
         <p className="text-gray-400 mt-1">Kelola pembayaran SPP sekolah</p>
       </div>
 
@@ -162,14 +162,14 @@ export default function PembayaranPage() {
             <thead className="bg-white/[0.04]">
               <tr>
                 {user?.role === 'admin' && (
-                  <th className="px-6 py-4 text-left font-['Acumin_Variable_Concept',sans-serif] text-sm">SISWA</th>
+                  <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">SISWA</th>
                 )}
-                <th className="px-6 py-4 text-left font-['Acumin_Variable_Concept',sans-serif] text-sm">BULAN</th>
-                <th className="px-6 py-4 text-left font-['Acumin_Variable_Concept',sans-serif] text-sm">TAHUN</th>
-                <th className="px-6 py-4 text-left font-['Acumin_Variable_Concept',sans-serif] text-sm">JUMLAH</th>
-                <th className="px-6 py-4 text-left font-['Acumin_Variable_Concept',sans-serif] text-sm">STATUS</th>
-                <th className="px-6 py-4 text-left font-['Acumin_Variable_Concept',sans-serif] text-sm">METODE</th>
-                <th className="px-6 py-4 text-left font-['Acumin_Variable_Concept',sans-serif] text-sm">AKSI</th>
+                <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">BULAN</th>
+                <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">TAHUN</th>
+                <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">JUMLAH</th>
+                <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">STATUS</th>
+                <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">METODE</th>
+                <th className="px-6 py-4 text-left font-['Inter',sans-serif] text-sm">AKSI</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-white/[0.06]">
@@ -205,7 +205,7 @@ export default function PembayaranPage() {
                         </button>
                       ) : (
                         <button
-                          className="flex items-center gap-2 px-4 py-2 bg-[#00aeff] hover:bg-[#00aeff]/80 rounded-lg transition-all text-sm font-['Acumin_Variable_Concept',sans-serif]"
+                          className="flex items-center gap-2 px-4 py-2 bg-[#00aeff] hover:bg-[#00aeff]/80 rounded-lg transition-all text-sm font-['Inter',sans-serif]"
                           onClick={() => handlePayment(payment)}
                         >
                           <CreditCard size={16} />
@@ -226,7 +226,7 @@ export default function PembayaranPage() {
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
           <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6 border-b border-white/[0.06]">
-              <h2 className="text-xl font-['Acumin_Variable_Concept',sans-serif]">PILIH METODE PEMBAYARAN</h2>
+              <h2 className="text-xl font-['Inter',sans-serif]">PILIH METODE PEMBAYARAN</h2>
               <p className="text-gray-400 text-sm mt-1">
                 Pembayaran SPP {selectedPayment.month} {selectedPayment.year} - Rp {selectedPayment.amount.toLocaleString('id-ID')}
               </p>
@@ -235,7 +235,7 @@ export default function PembayaranPage() {
             <div className="p-6 space-y-4">
               {/* Bank Transfer */}
               <div>
-                <h3 className="text-sm font-['Acumin_Variable_Concept',sans-serif] mb-3 flex items-center gap-2">
+                <h3 className="text-sm font-['Inter',sans-serif] mb-3 flex items-center gap-2">
                   <Building2 size={16} />
                   TRANSFER BANK
                 </h3>
@@ -267,7 +267,7 @@ export default function PembayaranPage() {
 
               {/* E-Wallet */}
               <div>
-                <h3 className="text-sm font-['Acumin_Variable_Concept',sans-serif] mb-3 flex items-center gap-2">
+                <h3 className="text-sm font-['Inter',sans-serif] mb-3 flex items-center gap-2">
                   <Smartphone size={16} />
                   E-WALLET
                 </h3>
@@ -299,7 +299,7 @@ export default function PembayaranPage() {
 
               {/* QRIS */}
               <div>
-                <h3 className="text-sm font-['Acumin_Variable_Concept',sans-serif] mb-3 flex items-center gap-2">
+                <h3 className="text-sm font-['Inter',sans-serif] mb-3 flex items-center gap-2">
                   <QrCode size={16} />
                   QRIS
                 </h3>
@@ -354,7 +354,7 @@ export default function PembayaranPage() {
               <button
                 onClick={processPayment}
                 disabled={!selectedMethod}
-                className="px-6 py-2 bg-[#00aeff] hover:bg-[#00aeff]/80 rounded-lg font-['Acumin_Variable_Concept',sans-serif] disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                className="px-6 py-2 bg-[#00aeff] hover:bg-[#00aeff]/80 rounded-lg font-['Inter',sans-serif] disabled:opacity-50 disabled:cursor-not-allowed transition-all"
               >
                 BAYAR SEKARANG
               </button>

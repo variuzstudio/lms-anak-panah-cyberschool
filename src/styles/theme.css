@@ -1,7 +1,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --font-size: 21px;
+  --font-size: 16px;
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
   --card: #ffffff;
@@ -122,8 +122,6 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    font-stretch: semi-condensed;
-    font-variation-settings: 'wdth' 87;
   }
 
   html, body, #root {
@@ -133,12 +131,17 @@
     padding: 0;
   }
 
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
   body {
     @apply bg-background text-foreground;
-    font-family: 'Acumin Variable Concept', 'Inter', sans-serif;
-    font-weight: 500;
-    font-stretch: semi-condensed;
-    font-variation-settings: 'wght' 500, 'wdth' 87;
+    font-family: 'Inter', sans-serif;
   }
 
   /**

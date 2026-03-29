@@ -1,11 +1,1 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-@font-face {
-  font-family: 'Acumin Variable Concept';
-  src: url('/fonts/AcuminVariableConcept.woff2') format('woff2'),
-       url('/fonts/AcuminVariableConcept.ttf') format('truetype');
-  font-weight: 100 900;
-  font-stretch: 75% 100%;
-  font-style: normal;
-  font-display: swap;
-}

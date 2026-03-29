@@ -80,7 +80,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
   };
 
   return (
-    <div className="flex h-screen bg-[#050a15] text-white overflow-hidden font-['Acumin_Variable_Concept',sans-serif]">
+    <div className="flex h-screen bg-[#050a15] text-white overflow-hidden font-['Inter',sans-serif]">
       {/* Ambient glow */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-[-20%] left-[-5%] w-[500px] h-[500px] rounded-full blur-[180px]" style={{ backgroundColor: getRoleColor() + '0c' }} />
@@ -121,12 +121,12 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
             </button>
           </div>
           {sidebarOpen && (
-            <p className="text-[11px] text-white/40 tracking-widest uppercase mt-1.5 font-['Acumin_Variable_Concept',sans-serif] text-center">Learning Management System</p>
+            <p className="text-[11px] text-white/40 tracking-widest uppercase mt-1.5 font-['Inter',sans-serif] text-center">Learning Management System</p>
           )}
         </div>
 
         {/* Nav */}
-        <nav className="flex-1 overflow-y-auto py-3 px-2 space-y-0.5">
+        <nav className="flex-1 overflow-y-auto scrollbar-hidden py-3 px-2 space-y-0.5">
           {filteredMenuItems.map((item) => {
             const isActive = currentPath === item.path;
             const color = getRoleColor();

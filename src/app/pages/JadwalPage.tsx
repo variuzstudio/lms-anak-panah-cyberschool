@@ -36,7 +36,7 @@ export default function JadwalPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-['Acumin_Variable_Concept',sans-serif]">JADWAL PELAJARAN</h1>
+        <h1 className="text-2xl font-['Inter',sans-serif]">JADWAL PELAJARAN</h1>
         <p className="text-gray-400 text-sm mt-1">Lihat jadwal pelajaran mingguan</p>
       </div>
 
@@ -51,7 +51,7 @@ export default function JadwalPage() {
                 : 'bg-white/[0.03] border border-white/[0.06] text-gray-400 hover:border-white/[0.12] hover:text-white'
             }`}
           >
-            <span className="font-['Acumin_Variable_Concept',sans-serif] text-sm">{day}</span>
+            <span className="font-['Inter',sans-serif] text-sm">{day}</span>
           </button>
         ))}
       </div>
@@ -72,10 +72,10 @@ export default function JadwalPage() {
                 <div className="flex gap-4 flex-1">
                   <div className="flex items-center gap-2 text-[#00aeff] min-w-[120px]">
                     <Clock size={20} />
-                    <span className="font-['Acumin_Variable_Concept',sans-serif] text-sm">{schedule.time}</span>
+                    <span className="font-['Inter',sans-serif] text-sm">{schedule.time}</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-['Acumin_Variable_Concept',sans-serif] text-lg mb-1">{schedule.subject}</h3>
+                    <h3 className="font-['Inter',sans-serif] text-lg mb-1">{schedule.subject}</h3>
                     <p className="text-sm text-gray-400">{schedule.teacher}</p>
                   </div>
                 </div>
@@ -91,14 +91,14 @@ export default function JadwalPage() {
       </div>
 
       <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg p-6">
-        <h3 className="font-['Acumin_Variable_Concept',sans-serif] mb-4">JADWAL LENGKAP MINGGU INI</h3>
+        <h3 className="font-['Inter',sans-serif] mb-4">JADWAL LENGKAP MINGGU INI</h3>
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead className="bg-transparent">
               <tr>
-                <th className="px-4 py-3 text-left text-sm font-['Acumin_Variable_Concept',sans-serif]">Waktu</th>
+                <th className="px-4 py-3 text-left text-sm font-['Inter',sans-serif]">Waktu</th>
                 {DAYS.map((day) => (
-                  <th key={day} className="px-4 py-3 text-left text-sm font-['Acumin_Variable_Concept',sans-serif]">{day}</th>
+                  <th key={day} className="px-4 py-3 text-left text-sm font-['Inter',sans-serif]">{day}</th>
                 ))}
               </tr>
             </thead>

@@ -85,7 +85,7 @@ export default function UjianPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-['Acumin_Variable_Concept',sans-serif]">UJIAN & EVALUASI</h1>
+          <h1 className="text-2xl font-['Inter',sans-serif]">UJIAN & EVALUASI</h1>
           <p className="text-gray-400 text-sm mt-1">
             {user?.role === 'guru' ? 'Kelola ujian dan evaluasi' : 'Daftar ujian dan evaluasi'}
           </p>
@@ -109,7 +109,7 @@ export default function UjianPage() {
                 <div className="flex items-center gap-3 mb-3">
                   <FileCheck size={24} className="text-[#ffb700]" />
                   <div>
-                    <h3 className="font-['Acumin_Variable_Concept',sans-serif] text-lg">{exam.title}</h3>
+                    <h3 className="font-['Inter',sans-serif] text-lg">{exam.title}</h3>
                     <div className="flex items-center gap-2 mt-1">
                       <span className={`px-2 py-0.5 rounded text-xs ${getTypeColor(exam.type)}`}>
                         {exam.type}
