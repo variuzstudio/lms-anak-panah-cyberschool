@@ -143,7 +143,7 @@ export default function TugasPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-['Orbitron',sans-serif]">TUGAS</h1>
+          <h1 className="text-3xl font-['Acumin_Variable_Concept',sans-serif]">TUGAS</h1>
           <p className="text-gray-400 mt-1">
             {user?.role === 'guru' ? 'Kelola tugas untuk siswa' : 'Lihat dan kumpulkan tugas'}
           </p>
@@ -151,7 +151,7 @@ export default function TugasPage() {
         {canCreateAssignment && (
           <button
             onClick={() => setIsCreateDialogOpen(true)}
-            className="bg-[#00aeff] hover:bg-[#00aeff]/80 text-white px-6 py-3 rounded-lg font-['Orbitron',sans-serif] text-sm flex items-center gap-2 transition-all"
+            className="bg-[#00aeff] hover:bg-[#00aeff]/80 text-white px-6 py-3 rounded-lg font-['Acumin_Variable_Concept',sans-serif] text-sm flex items-center gap-2 transition-all"
           >
             <Plus size={20} />
             BUAT TUGAS
@@ -223,7 +223,7 @@ export default function TugasPage() {
                         <FileText className="text-[#c800ff]" size={20} />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-lg font-['Orbitron',sans-serif] mb-1">{assignment.title}</h3>
+                        <h3 className="text-lg font-['Acumin_Variable_Concept',sans-serif] mb-1">{assignment.title}</h3>
                         <p className="text-sm text-gray-400 mb-2">{getSubjectName(assignment.subjectId)} • {getClassName(assignment.classId)}</p>
                         <p className="text-gray-300 text-sm">{assignment.description}</p>
                       </div>
@@ -250,7 +250,7 @@ export default function TugasPage() {
                     {user?.role === 'murid' && !mySubmission && (
                       <button
                         onClick={() => handleSubmitAssignment(assignment.id)}
-                        className="bg-[#00aeff] hover:bg-[#00aeff]/80 text-white px-4 py-2 rounded-lg text-sm font-['Orbitron',sans-serif] flex items-center gap-2 transition-all"
+                        className="bg-[#00aeff] hover:bg-[#00aeff]/80 text-white px-4 py-2 rounded-lg text-sm font-['Acumin_Variable_Concept',sans-serif] flex items-center gap-2 transition-all"
                       >
                         <Upload size={16} />
                         KUMPULKAN
@@ -286,12 +286,12 @@ export default function TugasPage() {
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
           <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg max-w-2xl w-full">
             <div className="p-6 border-b border-white/[0.06]">
-              <h2 className="text-xl font-['Orbitron',sans-serif]">BUAT TUGAS BARU</h2>
+              <h2 className="text-xl font-['Acumin_Variable_Concept',sans-serif]">BUAT TUGAS BARU</h2>
             </div>
 
             <div className="p-6 space-y-4">
               <div>
-                <label className="block text-sm font-['Orbitron',sans-serif] mb-2">Judul Tugas</label>
+                <label className="block text-sm font-['Acumin_Variable_Concept',sans-serif] mb-2">Judul Tugas</label>
                 <input
                   type="text"
                   value={newAssignment.title}
@@ -302,7 +302,7 @@ export default function TugasPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-['Orbitron',sans-serif] mb-2">Deskripsi</label>
+                <label className="block text-sm font-['Acumin_Variable_Concept',sans-serif] mb-2">Deskripsi</label>
                 <textarea
                   value={newAssignment.description}
                   onChange={(e) => setNewAssignment({ ...newAssignment, description: e.target.value })}
@@ -314,7 +314,7 @@ export default function TugasPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-['Orbitron',sans-serif] mb-2">Mata Pelajaran</label>
+                  <label className="block text-sm font-['Acumin_Variable_Concept',sans-serif] mb-2">Mata Pelajaran</label>
                   <select
                     value={newAssignment.subjectId}
                     onChange={(e) => setNewAssignment({ ...newAssignment, subjectId: e.target.value })}
@@ -328,7 +328,7 @@ export default function TugasPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-['Orbitron',sans-serif] mb-2">Kelas</label>
+                  <label className="block text-sm font-['Acumin_Variable_Concept',sans-serif] mb-2">Kelas</label>
                   <select
                     value={newAssignment.classId}
                     onChange={(e) => setNewAssignment({ ...newAssignment, classId: e.target.value })}
@@ -343,7 +343,7 @@ export default function TugasPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-['Orbitron',sans-serif] mb-2">Deadline</label>
+                <label className="block text-sm font-['Acumin_Variable_Concept',sans-serif] mb-2">Deadline</label>
                 <input
                   type="datetime-local"
                   value={newAssignment.dueDate}
@@ -365,7 +365,7 @@ export default function TugasPage() {
               </button>
               <button
                 onClick={handleCreateAssignment}
-                className="px-6 py-2 bg-[#00aeff] hover:bg-[#00aeff]/80 rounded-lg font-['Orbitron',sans-serif] transition-all"
+                className="px-6 py-2 bg-[#00aeff] hover:bg-[#00aeff]/80 rounded-lg font-['Acumin_Variable_Concept',sans-serif] transition-all"
               >
                 BUAT TUGAS
               </button>

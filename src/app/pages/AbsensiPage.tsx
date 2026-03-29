@@ -67,7 +67,7 @@ export default function AbsensiPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-['Orbitron',sans-serif]">ABSENSI</h1>
+        <h1 className="text-2xl font-['Acumin_Variable_Concept',sans-serif]">ABSENSI</h1>
         <p className="text-gray-400 text-sm mt-1">Rekap kehadiran siswa</p>
       </div>
 
@@ -103,7 +103,7 @@ export default function AbsensiPage() {
       {/* Percentage */}
       <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg p-6">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="font-['Orbitron',sans-serif] text-lg">PERSENTASE KEHADIRAN</h3>
+          <h3 className="font-['Acumin_Variable_Concept',sans-serif] text-lg">PERSENTASE KEHADIRAN</h3>
           <span className="text-3xl font-bold text-[#00aeff]">{percentage}%</span>
         </div>
         <div className="w-full bg-transparent rounded-full h-4">
@@ -120,7 +120,7 @@ export default function AbsensiPage() {
       {/* Attendance List */}
       <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg overflow-hidden">
         <div className="p-6 border-b border-white/[0.06]">
-          <h3 className="font-['Orbitron',sans-serif] text-lg">RIWAYAT ABSENSI</h3>
+          <h3 className="font-['Acumin_Variable_Concept',sans-serif] text-lg">RIWAYAT ABSENSI</h3>
         </div>
         <div className="divide-y divide-white/[0.06]">
           {attendance.map((record, index) => (

@@ -5,7 +5,7 @@ export default function LaporanPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-['Orbitron',sans-serif]">LAPORAN</h1>
+        <h1 className="text-2xl font-['Acumin_Variable_Concept',sans-serif]">LAPORAN</h1>
         <p className="text-gray-400 text-sm mt-1">Laporan akademik dan perkembangan siswa</p>
       </div>
 
@@ -43,7 +43,7 @@ export default function LaporanPage() {
 
       {/* Report List */}
       <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg p-6">
-        <h3 className="font-['Orbitron',sans-serif] text-lg mb-4">LAPORAN TERSEDIA</h3>
+        <h3 className="font-['Acumin_Variable_Concept',sans-serif] text-lg mb-4">LAPORAN TERSEDIA</h3>
         <div className="space-y-3">
           {[
             { title: 'Rapor Semester Ganjil 2025/2026', date: '15 Januari 2026', type: 'PDF' },
@@ -77,7 +77,7 @@ export default function LaporanPage() {
 
       {/* Academic Performance */}
       <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg p-6">
-        <h3 className="font-['Orbitron',sans-serif] text-lg mb-4">PERFORMA AKADEMIK</h3>
+        <h3 className="font-['Acumin_Variable_Concept',sans-serif] text-lg mb-4">PERFORMA AKADEMIK</h3>
         <div className="space-y-4">
           {[
             { subject: 'Matematika', score: 87, trend: '+3' },

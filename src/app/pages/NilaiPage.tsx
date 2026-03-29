@@ -108,7 +108,7 @@ export default function NilaiPage() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-['Orbitron',sans-serif]">NILAI & RAPOR</h1>
+          <h1 className="text-3xl font-['Acumin_Variable_Concept',sans-serif]">NILAI & RAPOR</h1>
           <p className="text-gray-400 mt-1">Lihat nilai dan rapor siswa</p>
         </div>
 
@@ -145,7 +145,7 @@ export default function NilaiPage() {
             </div>
             <button
               onClick={downloadRapor}
-              className="bg-[#00aeff] hover:bg-[#00aeff]/80 text-white px-6 py-3 rounded-lg font-['Orbitron',sans-serif] text-sm flex items-center gap-2 transition-all"
+              className="bg-[#00aeff] hover:bg-[#00aeff]/80 text-white px-6 py-3 rounded-lg font-['Acumin_Variable_Concept',sans-serif] text-sm flex items-center gap-2 transition-all"
             >
               <Download size={20} />
               UNDUH RAPOR
@@ -196,7 +196,7 @@ export default function NilaiPage() {
       {/* Grades Table */}
       <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg overflow-hidden">
         <div className="p-6 border-b border-white/[0.06]">
-          <h3 className="font-['Orbitron',sans-serif] text-lg">DAFTAR NILAI</h3>
+          <h3 className="font-['Acumin_Variable_Concept',sans-serif] text-lg">DAFTAR NILAI</h3>
           <p className="text-sm text-gray-400 mt-1">Semester 1 - Tahun Ajaran 2025/2026</p>
         </div>
 
@@ -204,12 +204,12 @@ export default function NilaiPage() {
           <table className="w-full">
             <thead className="bg-white/[0.04]">
               <tr>
-                <th className="px-6 py-4 text-left font-['Orbitron',sans-serif] text-sm">MATA PELAJARAN</th>
-                <th className="px-6 py-4 text-center font-['Orbitron',sans-serif] text-sm">TUGAS</th>
-                <th className="px-6 py-4 text-center font-['Orbitron',sans-serif] text-sm">UTS</th>
-                <th className="px-6 py-4 text-center font-['Orbitron',sans-serif] text-sm">UAS</th>
-                <th className="px-6 py-4 text-center font-['Orbitron',sans-serif] text-sm">NILAI AKHIR</th>
-                <th className="px-6 py-4 text-center font-['Orbitron',sans-serif] text-sm">HURUF</th>
+                <th className="px-6 py-4 text-left font-['Acumin_Variable_Concept',sans-serif] text-sm">MATA PELAJARAN</th>
+                <th className="px-6 py-4 text-center font-['Acumin_Variable_Concept',sans-serif] text-sm">TUGAS</th>
+                <th className="px-6 py-4 text-center font-['Acumin_Variable_Concept',sans-serif] text-sm">UTS</th>
+                <th className="px-6 py-4 text-center font-['Acumin_Variable_Concept',sans-serif] text-sm">UAS</th>
+                <th className="px-6 py-4 text-center font-['Acumin_Variable_Concept',sans-serif] text-sm">NILAI AKHIR</th>
+                <th className="px-6 py-4 text-center font-['Acumin_Variable_Concept',sans-serif] text-sm">HURUF</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-white/[0.06]">
@@ -271,7 +271,7 @@ export default function NilaiPage() {
 
       {/* Grade Legend */}
       <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg p-6">
-        <h3 className="font-['Orbitron',sans-serif] text-sm mb-4">KETERANGAN NILAI</h3>
+        <h3 className="font-['Acumin_Variable_Concept',sans-serif] text-sm mb-4">KETERANGAN NILAI</h3>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           <div className="flex items-center gap-2">
             <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 font-bold">A</span>

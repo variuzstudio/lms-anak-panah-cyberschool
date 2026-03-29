@@ -31,7 +31,7 @@ export default function KelasPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-['Orbitron',sans-serif]">MANAJEMEN KELAS</h1>
+          <h1 className="text-2xl font-['Acumin_Variable_Concept',sans-serif]">MANAJEMEN KELAS</h1>
           <p className="text-gray-400 text-sm mt-1">Kelola kelas dan wali kelas</p>
         </div>
         <Button className="bg-[#00aeff] hover:bg-[#00aeff]/80">
@@ -56,7 +56,7 @@ export default function KelasPage() {
         {filteredClasses.map((cls) => (
           <div key={cls.id} className="bg-white/[0.03] border border-[#00aeff] rounded-lg p-6 hover:border-white/[0.12] hover:shadow-lg hover:shadow-[#00aeff]/20 transition-all cursor-pointer">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-2xl font-['Orbitron',sans-serif] text-[#00aeff]">{cls.name}</h3>
+              <h3 className="text-2xl font-['Acumin_Variable_Concept',sans-serif] text-[#00aeff]">{cls.name}</h3>
               <span className="text-sm text-gray-400">Kelas {cls.grade}</span>
             </div>
             <div className="space-y-3">

@@ -80,7 +80,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
   };
 
   return (
-    <div className="flex h-screen bg-[#050a15] text-white overflow-hidden font-['Orbitron',sans-serif]">
+    <div className="flex h-screen bg-[#050a15] text-white overflow-hidden font-['Acumin_Variable_Concept',sans-serif]">
       {/* Ambient glow */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-[-20%] left-[-5%] w-[500px] h-[500px] rounded-full blur-[180px]" style={{ backgroundColor: getRoleColor() + '0c' }} />
@@ -121,7 +121,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
           </div>
           <img src="/logo.svg" alt="Logo" className={cn("transition-all", sidebarOpen ? "w-full h-auto" : "h-7 w-auto mx-auto")} />
           {sidebarOpen && (
-            <p className="text-[9px] text-white/40 tracking-widest uppercase mt-2 font-['Orbitron',sans-serif] text-center">Learning Management System</p>
+            <p className="text-[9px] text-white/40 tracking-widest uppercase mt-2 font-['Acumin_Variable_Concept',sans-serif] text-center">Learning Management System</p>
           )}
         </div>
 

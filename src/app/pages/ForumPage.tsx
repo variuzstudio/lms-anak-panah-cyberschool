@@ -143,13 +143,13 @@ export default function ForumPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-['Orbitron',sans-serif]">FORUM & EVENT</h1>
+          <h1 className="text-3xl font-['Acumin_Variable_Concept',sans-serif]">FORUM & EVENT</h1>
           <p className="text-gray-400 mt-1">Pengumuman, event, dan diskusi sekolah</p>
         </div>
         {hasPermission('create_forum_post') && (
           <button
             onClick={() => setIsCreateDialogOpen(true)}
-            className="bg-[#00aeff] hover:bg-[#00aeff]/80 text-white px-6 py-3 rounded-lg font-['Orbitron',sans-serif] text-sm flex items-center gap-2 transition-all"
+            className="bg-[#00aeff] hover:bg-[#00aeff]/80 text-white px-6 py-3 rounded-lg font-['Acumin_Variable_Concept',sans-serif] text-sm flex items-center gap-2 transition-all"
           >
             <Plus size={20} />
             BUAT POSTINGAN
@@ -161,7 +161,7 @@ export default function ForumPage() {
       <div className="flex gap-3 overflow-x-auto pb-2">
         <button
           onClick={() => setSelectedCategory('all')}
-          className={`px-4 py-2 rounded-lg font-['Orbitron',sans-serif] text-sm transition-all whitespace-nowrap ${
+          className={`px-4 py-2 rounded-lg font-['Acumin_Variable_Concept',sans-serif] text-sm transition-all whitespace-nowrap ${
             selectedCategory === 'all'
               ? 'bg-[#00aeff] text-white'
               : 'bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.12]'
@@ -171,7 +171,7 @@ export default function ForumPage() {
         </button>
         <button
           onClick={() => setSelectedCategory('pengumuman')}
-          className={`px-4 py-2 rounded-lg font-['Orbitron',sans-serif] text-sm transition-all whitespace-nowrap ${
+          className={`px-4 py-2 rounded-lg font-['Acumin_Variable_Concept',sans-serif] text-sm transition-all whitespace-nowrap ${
             selectedCategory === 'pengumuman'
               ? 'bg-[#00aeff] text-white'
               : 'bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.12]'
@@ -181,7 +181,7 @@ export default function ForumPage() {
         </button>
         <button
           onClick={() => setSelectedCategory('event')}
-          className={`px-4 py-2 rounded-lg font-['Orbitron',sans-serif] text-sm transition-all whitespace-nowrap ${
+          className={`px-4 py-2 rounded-lg font-['Acumin_Variable_Concept',sans-serif] text-sm transition-all whitespace-nowrap ${
             selectedCategory === 'event'
               ? 'bg-[#1aff00] text-black'
               : 'bg-white/[0.03] border border-white/[0.06] hover:border-[#1aff00]'
@@ -191,7 +191,7 @@ export default function ForumPage() {
         </button>
         <button
           onClick={() => setSelectedCategory('diskusi')}
-          className={`px-4 py-2 rounded-lg font-['Orbitron',sans-serif] text-sm transition-all whitespace-nowrap ${
+          className={`px-4 py-2 rounded-lg font-['Acumin_Variable_Concept',sans-serif] text-sm transition-all whitespace-nowrap ${
             selectedCategory === 'diskusi'
               ? 'bg-[#c800ff] text-white'
               : 'bg-white/[0.03] border border-white/[0.06] hover:border-[#c800ff]'
@@ -241,7 +241,7 @@ export default function ForumPage() {
                 </div>
 
                 {/* Post Content */}
-                <h3 className="text-xl font-['Orbitron',sans-serif] mb-3">{post.title}</h3>
+                <h3 className="text-xl font-['Acumin_Variable_Concept',sans-serif] mb-3">{post.title}</h3>
                 <p className="text-gray-300 mb-4 whitespace-pre-wrap">{post.content}</p>
 
                 {/* Post Actions */}
@@ -311,12 +311,12 @@ export default function ForumPage() {
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
           <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg max-w-2xl w-full">
             <div className="p-6 border-b border-white/[0.06]">
-              <h2 className="text-xl font-['Orbitron',sans-serif]">BUAT POSTINGAN BARU</h2>
+              <h2 className="text-xl font-['Acumin_Variable_Concept',sans-serif]">BUAT POSTINGAN BARU</h2>
             </div>
 
             <div className="p-6 space-y-4">
               <div>
-                <label className="block text-sm font-['Orbitron',sans-serif] mb-2">Kategori</label>
+                <label className="block text-sm font-['Acumin_Variable_Concept',sans-serif] mb-2">Kategori</label>
                 <select
                   value={newPost.category}
                   onChange={(e) => setNewPost({ ...newPost, category: e.target.value as any })}
@@ -329,7 +329,7 @@ export default function ForumPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-['Orbitron',sans-serif] mb-2">Judul</label>
+                <label className="block text-sm font-['Acumin_Variable_Concept',sans-serif] mb-2">Judul</label>
                 <input
                   type="text"
                   value={newPost.title}
@@ -340,7 +340,7 @@ export default function ForumPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-['Orbitron',sans-serif] mb-2">Konten</label>
+                <label className="block text-sm font-['Acumin_Variable_Concept',sans-serif] mb-2">Konten</label>
                 <textarea
                   value={newPost.content}
                   onChange={(e) => setNewPost({ ...newPost, content: e.target.value })}
@@ -363,7 +363,7 @@ export default function ForumPage() {
               </button>
               <button
                 onClick={handleCreatePost}
-                className="px-6 py-2 bg-[#00aeff] hover:bg-[#00aeff]/80 rounded-lg font-['Orbitron',sans-serif] transition-all"
+                className="px-6 py-2 bg-[#00aeff] hover:bg-[#00aeff]/80 rounded-lg font-['Acumin_Variable_Concept',sans-serif] transition-all"
               >
                 POSTING
               </button>

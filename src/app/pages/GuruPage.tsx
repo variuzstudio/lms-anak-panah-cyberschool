@@ -83,7 +83,7 @@ export default function GuruPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-['Orbitron',sans-serif]">MANAJEMEN GURU</h1>
+          <h1 className="text-2xl font-['Acumin_Variable_Concept',sans-serif]">MANAJEMEN GURU</h1>
           <p className="text-gray-400 text-sm mt-1">Kelola data guru sekolah</p>
         </div>
         <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
@@ -95,7 +95,7 @@ export default function GuruPage() {
           </DialogTrigger>
           <DialogContent className="bg-white/[0.03] border-white/[0.06] text-white">
             <DialogHeader>
-              <DialogTitle className="font-['Orbitron',sans-serif]">Tambah Guru Baru</DialogTitle>
+              <DialogTitle className="font-['Acumin_Variable_Concept',sans-serif]">Tambah Guru Baru</DialogTitle>
             </DialogHeader>
             <form onSubmit={handleAddTeacher} className="space-y-4">
               <div>
@@ -143,13 +143,13 @@ export default function GuruPage() {
           <table className="w-full">
             <thead className="bg-transparent border-b border-white/[0.06]">
               <tr>
-                <th className="px-6 py-4 text-left text-sm font-['Orbitron',sans-serif]">NIP</th>
-                <th className="px-6 py-4 text-left text-sm font-['Orbitron',sans-serif]">Nama</th>
-                <th className="px-6 py-4 text-left text-sm font-['Orbitron',sans-serif]">Mata Pelajaran</th>
-                <th className="px-6 py-4 text-left text-sm font-['Orbitron',sans-serif]">Kontak</th>
-                <th className="px-6 py-4 text-left text-sm font-['Orbitron',sans-serif]">Kelas</th>
-                <th className="px-6 py-4 text-left text-sm font-['Orbitron',sans-serif]">Status</th>
-                <th className="px-6 py-4 text-left text-sm font-['Orbitron',sans-serif]">Aksi</th>
+                <th className="px-6 py-4 text-left text-sm font-['Acumin_Variable_Concept',sans-serif]">NIP</th>
+                <th className="px-6 py-4 text-left text-sm font-['Acumin_Variable_Concept',sans-serif]">Nama</th>
+                <th className="px-6 py-4 text-left text-sm font-['Acumin_Variable_Concept',sans-serif]">Mata Pelajaran</th>
+                <th className="px-6 py-4 text-left text-sm font-['Acumin_Variable_Concept',sans-serif]">Kontak</th>
+                <th className="px-6 py-4 text-left text-sm font-['Acumin_Variable_Concept',sans-serif]">Kelas</th>
+                <th className="px-6 py-4 text-left text-sm font-['Acumin_Variable_Concept',sans-serif]">Status</th>
+                <th className="px-6 py-4 text-left text-sm font-['Acumin_Variable_Concept',sans-serif]">Aksi</th>
               </tr>
             </thead>
             <tbody>
