@@ -91,7 +91,7 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
       {/* Sidebar */}
       <aside className={cn(
         "relative z-30 h-full flex flex-col transition-all duration-300",
-        sidebarOpen ? "w-60" : "w-[68px]",
+        sidebarOpen ? "w-72" : "w-[68px]",
         "fixed md:relative",
         mobileMenuOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
       )}
@@ -104,24 +104,24 @@ export default function DashboardLayout({ children, onNavigate }: DashboardLayou
         }}
       >
         {/* Logo */}
-        <div className="flex flex-col border-b border-white/[0.08] shrink-0 px-3 py-3">
-          <div className="flex items-center justify-end gap-2 mb-1">
+        <div className="flex flex-col border-b border-white/[0.08] shrink-0 px-3 pt-2 pb-3">
+          <div className="flex items-start gap-2">
+            <img src="/logo.svg" alt="Logo" className={cn("transition-all flex-1 min-w-0", sidebarOpen ? "h-auto" : "h-7 w-auto mx-auto")} />
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="p-1.5 hover:bg-white/[0.06] rounded-lg transition-colors hidden md:flex items-center justify-center"
+              className="p-1.5 hover:bg-white/[0.06] rounded-lg transition-colors hidden md:flex items-center justify-center shrink-0 mt-1"
             >
               {sidebarOpen ? <ChevronLeft size={16} className="text-white/40" /> : <Menu size={16} className="text-white/40" />}
             </button>
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="p-1.5 hover:bg-white/[0.06] rounded-lg transition-colors md:hidden"
+              className="p-1.5 hover:bg-white/[0.06] rounded-lg transition-colors md:hidden shrink-0 mt-1"
             >
               <X size={16} className="text-white/40" />
             </button>
           </div>
-          <img src="/logo.svg" alt="Logo" className={cn("transition-all", sidebarOpen ? "w-full h-auto" : "h-7 w-auto mx-auto")} />
           {sidebarOpen && (
-            <p className="text-[11px] text-white/40 tracking-widest uppercase mt-2 font-['Acumin_Variable_Concept',sans-serif] text-center">Learning Management System</p>
+            <p className="text-[11px] text-white/40 tracking-widest uppercase mt-1.5 font-['Acumin_Variable_Concept',sans-serif] text-center">Learning Management System</p>
           )}
         </div>
 
