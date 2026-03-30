@@ -108,7 +108,7 @@ export default function App() {
       <AuthProvider>
         <NotificationProvider>
           <AppContent />
-          <Watermark />
+          {/* <Watermark /> */}
           <Toaster position="top-right" richColors theme="dark" />
         </NotificationProvider>
       </AuthProvider>
